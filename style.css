@@ -551,13 +551,13 @@ p {
           align-items: center;
 }
 
-.video-wrapper {
+.video {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.video-block {
+.video__block {
   margin: 0 auto;
   max-width: 100%;
   max-height: 705px;
