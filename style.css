@@ -30,6 +30,10 @@ p {
   margin: 0;
 }
 
+img {
+  display: block;
+}
+
 .container {
   max-width: 1274px;
   margin: 0 auto;
@@ -529,7 +533,7 @@ p {
 .project__item-pointer {
   position: absolute;
   color: #fbfaf8;
-  top: -11px;
+  top: -7px;
   left: 16px;
 }
 
@@ -860,7 +864,7 @@ p {
   margin-right: 75px;
 }
 
-.footer-top {
+.footer-main {
   background-color: #191919;
 }
 
@@ -1035,7 +1039,7 @@ p {
   margin-top: 8px;
 }
 
-.footer-bottom {
+.footer-copy {
   background-color: #101010;
 }
 
