@@ -473,7 +473,7 @@ img {
   width: 37px;
 }
 
-.project__btn:hover {
+.project__btn:hover, .project__btn.active {
   background-color: #998575;
   color: #fff;
 }
