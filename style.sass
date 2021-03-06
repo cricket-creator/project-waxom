@@ -292,16 +292,37 @@ img
     &__item
         width: 370px
         background-color: #fbfaf8
+        $root: &
 
         &:hover
             background-color: #352f2d
-        &:hover &-title
-            color: #fff
-        &:hover &-text
-            color: #c7b299
-        &:hover &-pointer
-            color: #352f2d
-
+            #{$root}
+                &-title
+                    color: #fff
+                &-text
+                    color: #c7b299
+                &-pointer
+                    color: #352f2d
+                &-image
+                    transform: scale(1.05)
+                    transition: transform 0.3s
+                &-image-wrapper::after
+                    display: flex
+        &-image
+            width: 100%
+            height: 237px
+            &-wrapper
+                display: flex
+                position: relative
+                overflow: hidden
+                &::after
+                    position: absolute
+                    content: ""
+                    top: 0
+                    bottom: 0
+                    width: 100%
+                    background-color: rgba(0, 0, 0, 0.3)
+                    display: none
         &-wrapper
             padding: 24px 26px 23px
             position: relative
@@ -324,9 +345,6 @@ img
             line-height: 17px
             color: #d1d1d1
             padding-top: 8px
-    &-image
-        width: 100%
-        height: 237px
 
 .video
     display: flex
@@ -415,6 +433,21 @@ img
         border: 1px solid #b3b3b3
         position: relative
         $root: &
+        &-image
+            height: 220px
+            width: 100%
+            &-wrapper
+                position: relative
+                display: flex
+                overflow: hidden
+                &::after
+                    position: absolute
+                    display: none
+                    content: ""
+                    top: 0
+                    bottom: 0
+                    width: 100%
+                    background-color: rgba(0, 0, 0, 0.5)
         &-calendar
             position: absolute
             width: 50px
@@ -443,11 +476,21 @@ img
             border-radius: 0 0 3px 3px
             height: 25px
         &:hover
+            background-color: #352f2d
             #{$root}
                 &-date
                     background-color: #c7b199
                 &-month
                     background-color: #a48d71
+                &-title
+                    color: #c7b299
+                &-text
+                    color: #fff
+                &-image
+                    transform: scale(1.05)
+                    transition: transform 0.3s
+                &-image-wrapper::after
+                    display: flex
         &-wrapper
             padding: 27px 23px 20px
         &-title
@@ -464,18 +507,9 @@ img
             line-height: 17px
             color: #c7b299
         &-arrow
+
             margin-left: 6px
             color: #c7b299
-        &:hover
-            background-color: #352f2d
-        &:hover &-text
-            color: #fff
-        &:hover &-title
-            color: #c7b299
-    &__image
-        height: 220px
-        width: 370px
-        margin: -1px
     &__nav
         display: flex
         justify-content: center
